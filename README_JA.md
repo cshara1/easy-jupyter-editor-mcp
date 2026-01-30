@@ -28,7 +28,21 @@ A lightweight Model Context Protocol (MCP) server designed to allow AI Agents to
 
 `claude_desktop_config.json` に以下のように設定を追加してください。
 
-#### GitHubから直接実行する場合 (推奨)
+#### PyPI から実行する場合 (推奨)
+最も簡単で標準的な方法です。
+
+```json
+{
+  "mcpServers": {
+    "easy-jupyter-editor": {
+      "command": "uvx",
+      "args": ["easy-jupyter-editor-mcp"]
+    }
+  }
+}
+```
+
+#### GitHub から直接実行する場合
 ```json
 {
   "mcpServers": {
@@ -60,21 +74,6 @@ A lightweight Model Context Protocol (MCP) server designed to allow AI Agents to
         "python",
         "/absolute/path/to/easy-jupyter-editor-mcp/src/easy_jupyter_editor_mcp/__init__.py"
       ]
-    }
-  }
-}
-```
-
-### 2. PyPI (将来的な公開時)
-
-もしPyPIに公開された場合は、以下のように簡潔に記述できます。
-
-```json
-{
-  "mcpServers": {
-    "easy-jupyter-editor": {
-      "command": "uvx",
-      "args": ["easy-jupyter-editor-mcp"]
     }
   }
 }

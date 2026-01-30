@@ -28,7 +28,21 @@ It is recommended to run this server using [uv](https://github.com/astral-sh/uv)
 
 Add the following configuration to `claude_desktop_config.json`.
 
-#### Running directly from GitHub (Recommended)
+#### Using PyPI (Recommended)
+This is the simplest way to run the server.
+
+```json
+{
+  "mcpServers": {
+    "easy-jupyter-editor": {
+      "command": "uvx",
+      "args": ["easy-jupyter-editor-mcp"]
+    }
+  }
+}
+```
+
+#### Running directly from GitHub
 ```json
 {
   "mcpServers": {
@@ -60,21 +74,6 @@ Add the following configuration to `claude_desktop_config.json`.
         "python",
         "/absolute/path/to/easy-jupyter-editor-mcp/src/easy_jupyter_editor_mcp/__init__.py"
       ]
-    }
-  }
-}
-```
-
-### 2. PyPI (Future Publication)
-
-If published to PyPI, you can configure it simply as:
-
-```json
-{
-  "mcpServers": {
-    "easy-jupyter-editor": {
-      "command": "uvx",
-      "args": ["easy-jupyter-editor-mcp"]
     }
   }
 }
